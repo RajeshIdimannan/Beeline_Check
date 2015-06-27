@@ -1,26 +1,23 @@
 package BeelineData;
 
-import java.io.BufferedReader;
+
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
-import jxl.Cell;
+
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.WorkbookSettings;
-import jxl.format.Border;
-import jxl.format.Colour;
+
 import jxl.read.biff.BiffException;
 import jxl.write.Label;
-import jxl.write.WritableFont;
+
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
-import mainController.MainController;
-import EndtoEnd.ExcelManipulation;
+
 
 public class inputsheetManupulation {
 	
@@ -63,7 +60,6 @@ public class inputsheetManupulation {
 		
 		WorkbookSettings wbSettings = new WorkbookSettings();
 		wbSettings.setLocale(new Locale("en", "ER"));
-		WritableSheet TestDataSheet = null;
 		Sheet TestData=null;
 		
 		String inputFile = dir.getCanonicalPath() + "\\Input_Workbook.xls";
@@ -83,7 +79,6 @@ public class inputsheetManupulation {
 		
 		WorkbookSettings wbSettings = new WorkbookSettings();
 		wbSettings.setLocale(new Locale("en", "ER"));
-		WritableSheet TestDataSheet = null;
 		Sheet TestData=null;
 		
 		String inputFile = dir.getCanonicalPath() + "\\Input_Workbook.xls";
@@ -100,13 +95,11 @@ public class inputsheetManupulation {
 		
 		WorkbookSettings wbSettings = new WorkbookSettings();
 		wbSettings.setLocale(new Locale("en", "ER"));
-		WritableSheet TestDataSheet = null;
 		Sheet TestData=null;
 		
 		String inputFile = dir.getCanonicalPath() + "\\Input_Workbook.xls";
 			workbook =  Workbook.getWorkbook(new File(inputFile));
 		TestData = workbook.getSheet("TEST DATA");
-		String excelName;
 		String dates[]=new String[2];
 		 dates[0]=TestData.getCell(4,1).getContents().toString();
 		 dates[1]=TestData.getCell(6,1).getContents().toString();

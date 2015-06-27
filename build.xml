@@ -52,7 +52,7 @@
         <antcall target="build"/>
     </target>
     <target name="MainController">
-        <java classname="mainController.MainController" failonerror="true" fork="no">
+        <java classname="mainController.MainController" failonerror="true" fork="yes">
             <classpath refid="Target.classpath"/>
         	<compilerarg compiler="org.eclipse.jdt.core.JDTCompilerAdapter" line="-1.7 -warn:+boxing"/>
         </java>

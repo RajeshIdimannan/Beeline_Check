@@ -70,15 +70,13 @@ import configuration.SystemConfig;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 
-
 public class DriverExecution {
 	
 	public String initDriver(String browserName, String iOSProxy) {
 		String browserPath = new String("");
 		int index = browserName.indexOf(" ");
 		if (index != -1) {
-			browserPath = (String) browserName.subSequence(index + 1,
-					browserName.length());
+			browserPath = (String) browserName.subSequence(index + 1, browserName.length());
 		}
 		if (browserName.toLowerCase().contains("firefox"))
 			return initFirefoxDriver(browserPath);
